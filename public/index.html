@@ -9,18 +9,26 @@
 
     <!--title of the table-->
     <div class="input-group">
+    <form action="/title" method="post">
         <span id="Title-box"> Title </span>
-        <input id="title" maxlength="190">
+        <input id="title" type="text"  maxlength="190">
+        <input type="button" value="Add" onclick="this.form.submit(); this.form.reset()">
+    </form>
     </div>
+
     <br>
     <!--for ehich purpose-->
+    <!--
     <div>
         <span id="event-box">Event</span>
         <textarea id="event" maxlength="240" ></textarea>
     </div>
 </div>
 <br>
-<!--get the mail-->
+-->
+
+
+<!--get the mail
 <div id="input-group">
     <form action="/email" method="POST">
         <p>Enter the email to get the time table</p>
@@ -31,6 +39,9 @@
 </form>
 </div>
 <br>
+-->
+
+
 <!--later add the date and time format-->
 <div class="Main">
     <table class = "table-box">
