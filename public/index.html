@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+<title>time table maker </title>
+<body>
+<h1 id ="text1"> time table maker </h1>
+<p>Make your time table and download it from the website</p>
+<div class="row">
+
+    <!--title of the table-->
+    <div class="input-group">
+        <span id="Title-box"> Title </span>
+        <input id="title" maxlength="190">
+    </div>
+    <br>
+    <!--for ehich purpose-->
+    <div>
+        <span id="event-box">Event</span>
+        <textarea id="event" maxlength="240" ></textarea>
+    </div>
+</div>
+<br>
+<!--get the mail-->
+<div id="input-group">
+    <form action="/email" method="POST">
+        <p>Enter the email to get the time table</p>
+    <input type="email" formaction="" placeholder="Email" required >
+    <span class="send and print" >
+        <button class= "button " type="button" onclick="getEmail(email)">recive</button>
+    </span>
+</form>
+</div>
+<br>
+<!--later add the date and time format-->
+<div class="Main">
+    <table class = "table-box">
+        <tbody> 
+    <tr>
+        <th>time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>thursday</th>
+        <th>Friday</th>
+    </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
