@@ -5,7 +5,7 @@ const app = express();
 const port = 2766;
 var mongoDbUrl = "mongodb://localhost:27017/Time-table";
 let mongoose = require('mongoose');
-var bodyParser=require("body-parser");
+const bodyParser = require('body-parser');
 
 mongoose.connect("mongodb://localhost:27017/Time-table", 
 { useUnifiedTopology: true, useNewUrlParser: true });
@@ -16,18 +16,25 @@ mongoose.connection.once('open', function(){
     console.log('error is',error)
 });
 
+app.use(express.urlencoded({extended:true}));
 
-//imorting modules 
+//getting the title
 
-app.get("/",(req,res) => {
-    console.log("hello");
-    res.send("hello im on");
-})  
-app.use("/users",(req,res,next)=>{
-    var name = {firstname: "avijit",lastname:"pal"}
-    res.json([name])
-    next();
+app.get('/title',function(req,res){
+    res.sendFile('puindex.html');
+});
+app.post('/title',function(req,res){
+    var name = req.body;
+    res.send(name+ 'title submitted!');
+    console.log("the title is added")
 })
+
+
+//app.use("/users",(req,res,next)=>{
+   // var name = {firstname: "avijit",lastname:"pal"}
+  //  res.json([name])
+  //  next();
+//})
 
 // starting the server
 app.listen(port, function () {
@@ -35,18 +42,18 @@ app.listen(port, function () {
     })
 
 app.post('/title', function(req,res){
-  var title = req.body.title;
+  var title = {
+       text:String,
+  };
  mongoose.Collection('Title').insertOne(title,function(err, collection){
    if(err) throw err;
    console.log("added in the databse");
  });
 })
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('/public'));
 app.get('/', function(req, res) {
     res.redirect('index.html');
 });
 
-    module.exports = {
-
-    }
+   
