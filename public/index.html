@@ -9,10 +9,10 @@
 
     <!--title of the table-->
     <div class="input-group">
-    <form action="/title" method="post" >
+    <form action="/eventdata" method="post" >
         <span id="Title-box"> Title </span>
-        <input  type="text"  maxlength="190"/ name="title">
-        <button type="submit">Add</button>
+        <input  type="text"  maxlength="190" name="title">
+        <button type="submit">ADD</button>
         
        <!--<input type="button" value="Add" onclick="this.form.submit(); this.form.reset()"/>--> 
     </form>
@@ -20,14 +20,16 @@
 
     <br>
     <!--for ehich purpose-->
-    <!--
     <div>
+        <form action="/eventdata" method="post">
         <span id="event-box">Event</span>
-        <textarea id="event" maxlength="240" ></textarea>
+        <textarea id="event" maxlength="240" name="event" ></textarea>
+        <button type="submit">ADD</button>
+    </form>
     </div>
 </div>
 <br>
--->
+
 
 
 <!--get the mail
