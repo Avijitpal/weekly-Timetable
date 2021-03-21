@@ -10,13 +10,13 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 var db;
-
+//var mongoDB = require('./mongoDB.js');
 
 //listing that the server is on
-app.listen(port,()=>{
+//app.listen(port,()=>{
     
-    console.log("server is up");
-})
+   // console.log("server is up");
+//})
 
 
 //getting the title
@@ -36,7 +36,7 @@ MongoClient.connect(url,{useUnifiedTopology:true}, function (err, database) {
 	db = database;
 	console.log('Connected to MongoDB');
 	//Start app only after connection is ready
-    app.listen(3000);
+    app.listen(port);
    }
  });
 
