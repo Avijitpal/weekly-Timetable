@@ -9,14 +9,14 @@ var url= "mongodb://localhost:27017/mydb";
 app.use(bodyParser.urlencoded({extended:false})); 
 app.use(bodyParser.json());
 
-var db;
-//var mongoDB = require('./mongoDB.js');
+//importing modules
+var mongoDB = require('./mongo.js');
 
 //listing that the server is on
-//app.listen(port,()=>{
+app.listen(port,()=>{
     
-   // console.log("server is up");
-//})
+    console.log("server is up");
+})
 
 
 //getting the title
@@ -29,33 +29,33 @@ var db;
     
 //})
 
-MongoClient.connect(url,{useUnifiedTopology:true}, function (err, database) {
-   if (err) throw err;
-   else
-   {
-	db = database;
-	console.log('Connected to MongoDB');
-	//Start app only after connection is ready
-    app.listen(port);
-   }
- });
-
 app.post('/eventdata', function(req, res) {
     // Insert JSON straight into MongoDB
-    data={
-             title:req.body.title,
-             event:req.body.event,
+    var title = req.body.title;
+    var event = req.body.event;
+    var data={
+      title:req.body.title,
+      event:req.body.event,
     };
-    db.collection('event').insertMany(req.body, function (err, result) {
-       if (err)
-          res.send('Error');
-       else
-         res.send('Success');
+    
+    if(data == undefined)
+    {
+      console.log("the data is blank");
+      res.end("ending");
+    }
+    else{
+      async function foo()
+      {
+        let eventdata = data;
+        await mongoDB.addOrderToDb(eventdata);
+      }
+      foo();
+    }
+       res.end();
+    
          console.log(JSON.stringify(data));
-         db.close();
- 
    });
- });
+
  
 //will load the html file and so on
 app.use(express.static(__dirname + '/public'));
