@@ -1,13 +1,20 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/Time-table";
+var url = "mongodb://localhost:27017/mydb";
 const mongoose = require("mongoose");
 
-MongoClient.connect(url,function(err,db){
-    console.log("database is connected");
-    db.close();
-});
+async function addOrderToDb(jsonData) {
+  const client = await MongoClient.connect(url, { 
+      useNewUrlParser: true, 
+      useUnifiedTopology: true,
+  });
+  const db = client.db('mainDb');
+  const ok = await db.collection("allOrders").insertOne(jsonData);
 
+  if(ok)
+      console.log("inserted order to db success");
 
+  client.close();
+}
 
 
 
@@ -25,4 +32,6 @@ MongoClient.connect(url,function(err,db){
 //        });
    // }); 
 
-
+module.exports ={
+  addOrderToDb: addOrderToDb,
+}
