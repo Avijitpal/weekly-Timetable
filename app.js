@@ -1,14 +1,16 @@
 
 var express = require('express');
+var app = express();
 var port = 2777;
 var bodyParser = require('body-parser');
-var app = express();
 var MongoClient = require('mongodb').MongoClient;
 //const { Db } = require('mongodb');
 var url= "mongodb://localhost:27017/mydb";
 app.use(bodyParser.urlencoded({extended:false})); 
 app.use(bodyParser.json());
+
 var db;
+
 
 //listing that the server is on
 app.listen(port,()=>{
@@ -16,7 +18,7 @@ app.listen(port,()=>{
     console.log("server is up");
 })
 
-//app.use(express)
+
 //getting the title
 //app.post('/eventdata',function(req,res){
     //data={
@@ -28,17 +30,15 @@ app.listen(port,()=>{
 //})
 
 MongoClient.connect(url,{useUnifiedTopology:true}, function (err, database) {
-   if (err) 
-   	throw err
+   if (err) throw err;
    else
    {
 	db = database;
 	console.log('Connected to MongoDB');
 	//Start app only after connection is ready
-    app.listen(port);
+    app.listen(3000);
    }
  });
-
 
 app.post('/eventdata', function(req, res) {
     // Insert JSON straight into MongoDB
@@ -46,14 +46,15 @@ app.post('/eventdata', function(req, res) {
              title:req.body.title,
              event:req.body.event,
     };
-   //db.collection('event').insert(req.body, function (err, result) {
-       //if (err)
-          //res.send('Error');
-       //else
-         //res.send('Success');
+    db.collection('event').insertMany(req.body, function (err, result) {
+       if (err)
+          res.send('Error');
+       else
+         res.send('Success');
          console.log(JSON.stringify(data));
+         db.close();
  
-   //});
+   });
  });
  
 //will load the html file and so on
