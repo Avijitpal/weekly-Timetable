@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <title>time table maker </title>
 <body>
 <h1 id ="text1"> time table maker </h1>
 <p>Make your time table and download it from the website</p>
 <div class="row">
-
     <!--title of the table-->
     <div class="input-group">
     <form action="/eventdata" method="post">
-        <span id="Title-box"> Title </span>
-        <input  type="text"  maxlength="190" name="title" >
-        <button type="submit" onclick="this.form.submit()">ADD</button>
-        
-       <!--<input type="button" value="Add" onclick="this.form.submit(); this.form.reset()"/>--> 
+        <span> Title </span>
+        <input id="Title" type="text"  maxlength="190" name="title" >
+        <span>Event</span>
+        <input id="Event" maxlength="240" name="event" ></input>
+        <br>
+        <br>
+        <button type="submit" onclick="insertData()">ADD</button>
     </form>
     </div>
-
     <br>
-    <!--for ehich purpose-->
-    <div>
-        <form action="/eventdata" method="post">
-        <span id="event-box">Event</span>
-        <textarea id="event" maxlength="240" name="event" ></textarea>
-        <button type="submit" onclick="this.form.submit()">ADD</button>
-    </form>
-    </div>
 </div>
 <br>
-
+<br>
+<div>
+    <table class = "table-box">
+        <thead>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>thursday</th>
+                <th>Friday</th>
+                <th>satarday</th>
+                <th>sunday</th>
+            </tr>
+        </thead>
+        <tbody id="insertionPoint"> 
+         
+        </tbody>
+    </table>
+</div>
 
 
 <!--get the mail
@@ -50,4 +62,5 @@
 
 </div>
 </body>
+<script src="addtheinfo.js"></script>
 </html>
