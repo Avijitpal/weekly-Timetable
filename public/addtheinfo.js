@@ -6,6 +6,6 @@ function insertData() {
      event + "</td><td>";
   
     // The below part is to clear the values after the entry is added.
-    document.getElementById("Title").value = ""
-    document.getElementById("Event").value = "";
+   // document.getElementById("Title").value = ""
+   // document.getElementById("Event").value = "";
 }
