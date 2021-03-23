@@ -3,9 +3,9 @@ function insertData() {
     var event= document.getElementById("Event").value;
     document.getElementById("insertionPoint").innerHTML += "<tr><td>"
      + title + "</td><td>" +
-     event + "</td><td>";
+     event + "</td></tr>";
   
     // The below part is to clear the values after the entry is added.
-   // document.getElementById("Title").value = ""
-   // document.getElementById("Event").value = "";
+   document.getElementById("Title").value = ""
+   document.getElementById("Event").value = "";
 }
