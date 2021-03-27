@@ -1,2 +1,38 @@
 
-table, td, th {border: 1px solid black; border-collapse: collapse;}
+table, td, th 
+{border: 1px solid black; border-collapse: collapse;}
+
+.dropbtn {
+    background-color: #ACE0DD;
+    color: black;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.dropdown {
+    display: inline-block;
+    position: relative
+}
+.dropdown-content {
+ 
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    display: none;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #D2E9E1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: grey;
+}
