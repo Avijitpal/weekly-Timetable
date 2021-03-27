@@ -8,10 +8,16 @@
 <body>
 <h1 id ="text1"> time table maker </h1>
 <p>Make your time table and download it from the website</p>
+  <!-- to avoid being rediected to next page -->
+  <style>
+    .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+    </style> 
+    <iframe name="hiddenFrame" class="hide"></iframe>
+
 <div class="row">
     <!--title of the table-->
     <div class="input-group">
-    <form action="/eventdata" method="post" target="blank">
+    <form action="/eventdata" method="post" target="hiddenFrame">
         <span> Title </span>
         <input id="Title" type="text"  maxlength="190" name="title" >
         <span>Event</span>
