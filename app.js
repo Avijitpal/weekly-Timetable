@@ -36,6 +36,8 @@ app.post('/eventdata', function(req, res) {
     var data={
       title:req.body.title,
       event:req.body.event,
+      time:req.body.time,
+      
     };
     
     if(data == undefined)

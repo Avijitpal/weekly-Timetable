@@ -18,7 +18,7 @@ async function addOrderToDb(jsonData) {
     const ok = await db.collection("allOrders").insertOne(jsonData);
 
     if(ok)
-        console.log("inserted order to db success");
+        console.log("inserted data to db success");
 
     client.close();
 }
