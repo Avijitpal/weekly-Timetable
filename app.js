@@ -32,13 +32,14 @@ app.listen(port,()=>{
 app.post('/eventdata', function(req, res) {
     // Insert JSON straight into MongoDB
     var title = req.body.title;
+    var time = req.body.time;
     //var event = req.body.event;
-     var day = req.body.day;
+    // var day = req.body.day;
     var data={
       title:req.body.title,
      // event:req.body.event,
-     // time:req.body.time,
-      day:req.body.day,
+      time:req.body.time,
+     // day:req.body.day,
     };
     
     if(data == undefined)
