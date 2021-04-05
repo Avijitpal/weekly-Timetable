@@ -14,7 +14,6 @@ var mongoDB = require('./mongo.js');
 
 //listing that the server is on
 app.listen(port,()=>{
-    
     console.log("server is up");
 })
 
@@ -33,13 +32,14 @@ app.post('/eventdata', function(req, res) {
     // Insert JSON straight into MongoDB
     var title = req.body.title;
     var time = req.body.time;
+    var day = req.body.days;
     //var event = req.body.event;
-    // var day = req.body.day;
     var data={
       title:req.body.title,
      // event:req.body.event,
       time:req.body.time,
-     // day:req.body.day,
+      day:req.body.days,
+     
     };
     
     if(data == undefined)

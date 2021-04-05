@@ -23,7 +23,10 @@ async function addOrderToDb(jsonData) {
     client.close();
 }
 
+
+
+
 module.exports ={
-    addOrderToDb:addOrderToDb
+    addOrderToDb:addOrderToDb,
 }
 
