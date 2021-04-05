@@ -11,6 +11,7 @@ function insertData() {
      var event= document.getElementById("Event").value;
      var time = document.getElementById("Time").value;
      var day = document.getElementById("week-days").value;
+     
      document.getElementById("insertionPoint").innerHTML += "<tr><td>"
      + title +"</td><td>"+ time+
      
