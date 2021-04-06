@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 //importing modules
 var mongoDB = require('./mongo.js');
 
+
 //listing that the server is on
 app.listen(port,()=>{
     console.log("server is up");
@@ -33,10 +34,10 @@ app.post('/eventdata', function(req, res) {
     var title = req.body.title;
     var time = req.body.time;
     var day = req.body.days;
-    //var event = req.body.event;
+    var event = req.body.event;
     var data={
       title:req.body.title,
-     // event:req.body.event,
+      event:req.body.event,
       time:req.body.time,
       day:req.body.days,
      

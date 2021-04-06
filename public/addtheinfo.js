@@ -13,10 +13,10 @@ function insertData() {
      var day = document.getElementById("week-days").value;
      
      document.getElementById("insertionPoint").innerHTML += "<tr><td>"
-     + title +"</td><td>"+ time+
+     + title +time+day+"</td><td>"+
      
        
-                              "<td></td>"+day+ 
+                              "<td></td>"+
                               "<td></td>"+
                               "<td></td>"+
                               "<td></td>"+
