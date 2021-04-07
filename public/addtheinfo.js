@@ -34,10 +34,11 @@ function insertData() {
   }
   function insert(JSON)
   {
-      console.log("the data is inserted");
+     var day = JSON;
+      console.log("the data is inserted"+day);
   }
   document.getElementById("table").innerHTML += "<tr>"
-  + "<td>"+day+time+"</td>"
+  + "<td>"+day+" "+time+"</td>"
   + "<td>"+day+"</td>"
   + "<td>"+day+"</td>"
   + "<td>"+day+"</td>"
