@@ -1,28 +1,44 @@
 
-
-
-
-
-
-
-
 function insertData() {
   var title = document.getElementById("Title").value;
   var event= document.getElementById("Event").value;
   var time = document.getElementById("Time").value;
   var day = document.getElementById("week-days").value;
+ 
   if(day == "Monday")
   {
-    console.log("its monday");
+    insert(day);
   }
-  if(day == "Tuesday")
+  else if(day == "Tuesday")
   {
      console.log("its tuesday");
   }
-  
+  else if(day == "Wednesday")
+  {
+    console.log("its Wednesday");
+  }
+  else if(day == "Thursday")
+  {
+    console.log("its Thursday");
+  }
+  else if(day == "Friday")
+  {
+    console.log("its Friday");
+  }
+  else if(day == "Satarday")
+  {
+    console.log("its Satarday");
+  }
+  else{
+    console.log("its Sunday");
+  }
+  function insert(JSON)
+  {
+      console.log("the data is inserted");
+  }
   document.getElementById("table").innerHTML += "<tr>"
-  +"<td>"+day+"</td>"
-  +"<td>"+day+"</td>"
+  + "<td>"+day+time+"</td>"
+  + "<td>"+day+"</td>"
   + "<td>"+day+"</td>"
   + "<td>"+day+"</td>"
   + "<td>"+day+"</td>"
