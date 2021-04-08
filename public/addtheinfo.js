@@ -4,50 +4,108 @@ function insertData() {
   var event= document.getElementById("Event").value;
   var time = document.getElementById("Time").value;
   var day = document.getElementById("week-days").value;
+  var details =title+event+day+time;
+  insert(details)
  
-  if(day == "Monday")
+  function insert(JSON)
   {
-    insert(day);
-  }
-  else if(day == "Tuesday")
-  {
-     console.log("its tuesday");
-  }
-  else if(day == "Wednesday")
-  {
-    console.log("its Wednesday");
-  }
+    var details = JSON;
+       
+     if(day == "Monday")
+     {
+      document.getElementById("table").innerHTML += "<tr>"
+      + "<td>"+details+"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      
+                                                  "</tr>";
+     }
+    else if(day == "Tuesday")
+    {
+      document.getElementById("table").innerHTML += "<tr>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+details +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      
+                                                  "</tr>";
+    }
+    else if(day == "Wednesday")
+    {
+      document.getElementById("table").innerHTML += "<tr>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+details +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      
+                                                  "</tr>";
+    }
   else if(day == "Thursday")
   {
-    console.log("its Thursday");
+    document.getElementById("table").innerHTML += "<tr>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+details +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      
+                                                  "</tr>";
   }
   else if(day == "Friday")
   {
-    console.log("its Friday");
+    document.getElementById("table").innerHTML += "<tr>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+details +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      + "<td>"+" " +"</td>"
+      
+                                                  "</tr>";
   }
   else if(day == "Satarday")
-  {
-    console.log("its Satarday");
+       {
+        document.getElementById("table").innerHTML += "<tr>"
+        + "<td>"+ " "+"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+details+"</td>"
+        + "<td>"+" "+"</td>"
+        
+                                                    "</tr>";
+       }
+       else if(day == "Sunday")
+       {
+        document.getElementById("table").innerHTML += "<tr>"
+        + "<td>"+" "+"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+" " +"</td>"
+        + "<td>"+details+"</td>"
+        
+                                                    "</tr>";
+       }
+      
   }
-  else{
-    console.log("its Sunday");
-  }
-  function insert(JSON)
-  {
-     var day = JSON;
-      console.log("the data is inserted"+day);
-  }
-  document.getElementById("table").innerHTML += "<tr>"
-  + "<td>"+day+" "+time+"</td>"
-  + "<td>"+day+"</td>"
-  + "<td>"+day+"</td>"
-  + "<td>"+day+"</td>"
-  + "<td>"+day+"</td>"
-  + "<td>"+day+"</td>"
-  + "<td>"+day+"</td>"
+ 
   
-                                              "</tr>";
-
 
 // event + "</td></tr>";
 
@@ -57,6 +115,7 @@ function insertData() {
 }
 
 
-     
+
+ 
 
 
