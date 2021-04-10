@@ -4,7 +4,7 @@ function insertData() {
   var event= document.getElementById("Event").value;
   var time = document.getElementById("Time").value;
   var day = document.getElementById("week-days").value;
-  var details =title+event+day+time;
+  details = "Time:"+time+"<br>"+"Title:"+title+"<br>"+"Event:"+event+"<br>";
   insert(details)
  
   function insert(JSON)
@@ -102,18 +102,16 @@ function insertData() {
         
                                                     "</tr>";
        }
-      
-  }
  
   
 
-// event + "</td></tr>";
+
 
 // The below part is to clear the values after the entry is added.
 //document.getElementById("Title") = ""
 //document.getElementById("Event") = "";
 }
-
+}
 
 
  
