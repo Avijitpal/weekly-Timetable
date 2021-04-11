@@ -1,6 +1,11 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 
 table, td, th 
-{border: 1px solid black; border-collapse: collapse;}
+{border: 1px solid rgb(255, 255, 255); border-collapse: collapse;}
 
 .dropbtn {
     background-color: #ACE0DD;
@@ -36,3 +41,48 @@ table, td, th
 .dropdown:hover .dropbtn {
     background-color: grey;
 }
+/* the heading and the texts are align center*/
+#text1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+/*creating space between the table and enailbox*/
+#email-box
+{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    
+}
+.main-table-div{
+  padding: 1em;
+  margin: 1em auto;
+   
+}
+
+#table-box {
+   
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  #table-box td, #table-box th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #table-box tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #table-box tr:hover {background-color: #ddd;}
+  
+  #table-box th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align:center;
+    background-color: #84B4C8;
+    color: white;
+  }

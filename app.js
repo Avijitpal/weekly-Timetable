@@ -63,12 +63,6 @@ app.post('/eventdata', function(req, res) {
          console.log(JSON.stringify(data));
    });
   
-   
-
-
-
-
- 
 //will load the html file and so on
 app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res) {

@@ -6,7 +6,7 @@
     </head>
 <title>time table maker </title>
 <body>
-<h1 id ="text1"> time table maker </h1>
+<h1 id ="text1"> Weely-Timetable </h1>
 <p>Make your time table and download it from the website</p>
   <!-- to avoid being rediected to next page -->
   <style>
@@ -48,8 +48,8 @@
     </div>
 <br>
 <br>
-<div>
-    <table class = "table-box">
+<div class="main-table-div">
+    <table id= "table-box">
         <thead>
             <tr>
                 <th>Monday</th>
@@ -71,7 +71,7 @@
 <br>
 <br>
 
-<div id="input-group">
+<div id="email-box">
     <form action="/email" method="POST">
         <p>Enter the email to get the time table</p>
     <input type="email" formaction="" placeholder="Email" required >
@@ -81,11 +81,6 @@
 </form>
 </div>
 <br>
-
-
-
-
-
 </body>
 <script src="addtheinfo.js"></script>
 
