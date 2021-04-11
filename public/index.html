@@ -19,11 +19,11 @@
     <div class="input-group">
     <form action="/eventdata" method="post" target="hiddenFrame">
         <span> Title </span>
-        <input id="Title" type="text"  maxlength="190" name="title" >
+        <input id="Title" type="text"  maxlength="190" name="title" required>
         <br>
         <br>
         <span>Event</span>
-        <input id="Event" maxlength="190" name="event"  ></input>
+        <input id="Event" maxlength="190" name="event" required ></input>
         <br>
         <br>
         <span>Time</span>
@@ -61,7 +61,7 @@
                 <th>Sunday</th>
             </tr>
         </thead>
-        <tbody id="table"> 
+        <tbody id="table" > 
          
         </tbody>
     </table>
