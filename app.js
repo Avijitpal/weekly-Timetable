@@ -1,5 +1,6 @@
 
 var express = require('express');
+var nodemailer = require('nodemailer')
 var app = express();
 var port = 2777;
 var bodyParser = require('body-parser');
@@ -11,6 +12,7 @@ app.use(bodyParser.json());
 
 //importing modules
 var mongoDB = require('./mongo.js');
+const { text } = require('body-parser');
 
 
 //listing that the server is on
@@ -60,6 +62,35 @@ app.post('/eventdata', function(req, res) {
     
          console.log(JSON.stringify(data));
    });
+  
+   var transport = nodemailer.createTransport({
+     
+       service: 'gmail',
+       auth:{
+          user:'apal731224@gmail.com',
+          pass: 'avijitpal@1'
+       
+     }
+   }
+   )
+  
+   var mailOptions = {
+     from: 'apal731224@gmail.com',
+     to: 'avijitpal20309@gmail.com',
+     subject: 'first mail',
+     text:'body of the mail'
+   }
+  
+   transport.sendMail(mailOptions,function(error,info){
+     if(error){
+       console.log(error)
+     }else
+     {
+       console.log("sent"+info.response)
+     }
+   })
+
+
 
 
 
