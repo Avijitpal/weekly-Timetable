@@ -1,7 +1,82 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+#text1{
+   text-align: center;
+}
+p{
+    text-align: left;
+}
+/*style for the input boxes setting the position in the center*/
+.box{
+  
+    display: grid;
+    place-items: center;
+    border: 1px white;
+    background-color: #84B4C8;
+    border-radius: 5px;
+    font-size: 25px;
+    height: 40;
+    color: #fff;
+}
 
+.box2
+{
+    border: 1px white;
+    background-color: #84B4C8;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    
+}
+.title-and-event
+{
+    gap: 20px;
+    display: flex;
+    justify-content:center;
+}
+.time-and-day{
+    gap: 15px;
+    display: flex;
+    justify-content:center;
+
+}
+
+button{
+  margin: auto;
+  display: block;
+  padding: 10px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color:#8BCDFF;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px rgb(218, 215, 215);
+  }
+#Title,#Event{
+    height: 40px ;
+    width: 480px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    transform: translateY(-1px);
+    border: 1px solid;
+
+}
+#Time,#week-days
+{
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    transform: translateY(-1px);
+    border: 1px solid;
+    
+}
 
 
 table, td, th 
@@ -42,16 +117,11 @@ table, td, th
     background-color: grey;
 }
 /* the heading and the texts are align center*/
-#text1{
-    text-align: center;
-}
-p{
-    text-align: center;
-}
+
 /*creating space between the table and enailbox*/
 #email-box
 {
-    position: fixed;
+    position:static;
     bottom: 0;
     margin-bottom: 10px;
     
@@ -67,6 +137,7 @@ p{
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+
     
   }
   

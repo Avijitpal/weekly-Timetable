@@ -6,45 +6,61 @@
     </head>
 <title>time table maker </title>
 <body>
-<h1 id ="text1"> Weely-Timetable </h1>
-<p>Make your time table and download it from the website</p>
+<h1 id ="text1"><img src="img.jpg" width="480"></h1>
+<!--<p id="heading-text">Make your time table and download it from the website</p>-->
   <!-- to avoid being rediected to next page -->
   <style>
     .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
     </style> 
     <iframe name="hiddenFrame" class="hide"></iframe>
 
+<br>
 <div class="row">
-    <!--title of the table-->
-    <div class="input-group">
+  <div class="input-group">
     <form action="/eventdata" method="post" target="hiddenFrame">
+     <div class="title-and-event">
+            <!--titlte box-->
+      <div class="box">
         <span> Title </span>
         <input id="Title" type="text"  maxlength="190" name="title" required>
-        <br>
-        <br>
+     </div>
+    <!--Event box-->
+    <div class="box">
         <span>Event</span>
         <input id="Event" maxlength="190" name="event" required ></input>
+   </div>
+
+     </div>
         <br>
         <br>
+   <div class="time-and-day" >
+    <div class="box2">
         <span>Time</span>
-        <input id="Time" type="time" name="time" name="day " value="00:00" />
-        <select name="days" id="week-days">
-            <option name="day " value="Monday" >Monday</option>
-            <option name="day " value="Tuesday" >Tuesday</option>
-            <option name="day " value="Wednesday" >Wednesday</option>
-            <option name="day " value="Thursday" >Thursday</option>
-            <option name="day " value="Friday" >Friday</option>
-            <option name="day " value="Satarday" >Satarday</option>
-            <option name="day " value="Sunday">Sunday</option>
-          </select>
+      <input id="Time" type="time" name="time" name="day " value="00:00" />
+   </div>
+   
+      <div class="box2">
+          <span>Day</span>
+          <select name="days" id="week-days">
+              <option name="day " value="Monday" >Monday</option>
+              <option name="day " value="Tuesday" >Tuesday</option>
+              <option name="day " value="Wednesday" >Wednesday</option>
+              <option name="day " value="Thursday" >Thursday</option>
+              <option name="day " value="Friday" >Friday</option>
+              <option name="day " value="Satarday" >Satarday</option>
+              <option name="day " value="Sunday">Sunday</option>
+            </select>
+      </div>
+   </div>
+      
+        
         </div>
+
+        
         <br>
-        <br>
-        <button type="submit" onclick="insertData()">ADD</button>
+        <button class="add" type="submit" onclick="insertData()">ADD</button>
     </form>
-   <br>
-   <br>
-    
+   
     </div>
 <br>
 <br>
@@ -73,11 +89,11 @@
 
 <div id="email-box">
     <form action="/email" method="POST">
-        <p>Enter the email to get the time table</p>
+        <p id="e-text">Enter the email to get the time table</p>
     <input type="email" formaction="" placeholder="Email" required >
-    <span class="send and print" >
+    <!--<span class="send and print" >
         <button class= "button " type="button" onclick="getEmail(email)">recive</button>
-    </span>
+    </span>-->
 </form>
 </div>
 <br>
