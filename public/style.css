@@ -8,6 +8,10 @@ p{
     text-align: left;
 }
 /*style for the input boxes setting the position in the center*/
+#row
+{
+    margin-bottom: 300px;
+}
 .box{
   
     display: grid;
