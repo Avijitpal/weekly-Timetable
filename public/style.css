@@ -53,7 +53,7 @@ button{
   margin: auto;
   display: block;
   padding: 10px 25px;
-  font-size: 24px;
+  font-size: 15px;
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -220,4 +220,9 @@ table, td, th
   }
 footer{
   margin: 0;
+}
+
+.fa-file-pdf-o{
+     color: white;
+     width: auto;
 }
