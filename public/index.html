@@ -91,11 +91,11 @@
 
 
 <div id="email-box">
-    <form>
+    <form action="/email" method="post" target="hiddenFrame">
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
-        <span id="email-submit"><input  type="submit"></span>
+        <span id="email-submit"><input  type="submit" onclick="email()"></span>
       </form>
 </div>
 </body>

@@ -1,6 +1,4 @@
-
 var express = require('express');
-
 var app = express();
 var port = 2777;
 var bodyParser = require('body-parser');
@@ -62,6 +60,11 @@ app.post('/eventdata', function(req, res) {
     
          console.log(JSON.stringify(data));
    });
+app.post('/email',function(req,res){
+  var email = req.body.email
+  console.log("got the mail"+email);
+})
+
   
 //will load the html file and so on
 app.use(express.static(__dirname + '/public'));
