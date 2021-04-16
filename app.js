@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var port = 2777;
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 var MongoClient = require('mongodb').MongoClient;
 //const { Db } = require('mongodb');
 var url= "mongodb://localhost:27017/mydb";
@@ -63,6 +64,20 @@ app.post('/eventdata', function(req, res) {
 app.post('/email',function(req,res){
   var email = req.body.email
   console.log("got the mail"+email);
+  var transporter = nodemailer.createTransport({
+    service:'gmail',
+    auth:{
+       user:'weeklytimetable01@gmail.com',
+       pass:'Timetable01'
+    }
+  });
+  var mailoptions ={
+    from: 'weeklytimetable01@gmail.com',
+    to: 'avijitpal20309@gmail.com',
+    subject:'First try',
+    text: 'first try'
+  };
+
 })
 
   
