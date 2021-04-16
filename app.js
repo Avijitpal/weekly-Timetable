@@ -61,24 +61,32 @@ app.post('/eventdata', function(req, res) {
     
          console.log(JSON.stringify(data));
    });
-app.post('/email',function(req,res){
-  var email = req.body.email
-  console.log("got the mail"+email);
-  var transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-       user:'weeklytimetable01@gmail.com',
-       pass:'Timetable01'
-    }
-  });
-  var mailoptions ={
-    from: 'weeklytimetable01@gmail.com',
-    to: 'avijitpal20309@gmail.com',
-    subject:'First try',
-    text: 'first try'
-  };
-
-})
+//app.post('/email',function(req,res){
+  //var email = req.body.email;
+  //if(email == undefined){
+  //  res.write("please enter a valid email");
+  //}
+  //var transporter = nodemailer.createTransport({
+   // service:'gmail',
+    //auth:{
+      // user:'weeklytimetable01@gmail.com',
+     //  pass:'Timetable011',
+    //}
+  //});
+  //var mailoptions ={
+    //from: 'weeklytimetable01@gmail.com',
+    //to: email,
+    //subject:'First try',
+    //text: 'first try'
+  //};
+//transporter.sendMail(mailoptions,function(error,info){
+ // if(error){
+   // console.log(error);
+  //} else{
+  //  console.log('email sent'+info.respose);
+  //}
+//})
+//});
 
   
 //will load the html file and so on
