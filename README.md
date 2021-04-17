@@ -1,5 +1,5 @@
 # weekly-Timetable
-weekly-Timetable is a website in which the user will add the details in the input boxes of web and simply add them and they eill be able to download the pdf format of the table AND ENJOY!.
+weekly-Timetable is a website in which the user will add the details in the input boxes of web and simply add them and they Will be able to download the pdf format of the table AND ENJOY!.
 
 ## Used-tech
 ### Frontend
