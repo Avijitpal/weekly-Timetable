@@ -23,6 +23,5 @@ weekly-Timetable is a website in which the user will add the details in the inpu
 ## Demo
 ![alt text](https://i.imgur.com/XgSeqs5.png)
 #### After clicking the pdf button the table will be downloaded as pdf
-![alt text](https://i.imgur.com/LkwxAay.png)
 #### The table view
 ![alt text](https://i.imgur.com/0RvvSCf.png)
